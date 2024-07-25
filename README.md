@@ -1,8 +1,8 @@
 # AutosApp2: Aplicación Interactiva de Información de Autos
 
 ![Portada de AutosApp2](CLASE_AUTO.png)
-)
 
+autos_json
 ## Descripción
 
 AutosApp2 es una aplicación Xamarin.Forms que demuestra el uso de clases, propiedades, constructores y recuperación de datos JSON desde una URL. Esta aplicación proporciona una interfaz interactiva para que los usuarios exploren información sobre varios modelos de autos.
@@ -27,6 +27,8 @@ AutosApp2 es una aplicación Xamarin.Forms que demuestra el uso de clases, propi
    - Implementa la clase `Auto` para representar objetos de autos
    - Utiliza programación asíncrona para la carga de datos
    - Maneja la deserialización JSON usando Newtonsoft.Json
+   - 
+![Portada de AutosApp2](autos_json.png)
 
 3. **Gestión de Datos:**
    - Recupera datos de autos desde un archivo JSON remoto
