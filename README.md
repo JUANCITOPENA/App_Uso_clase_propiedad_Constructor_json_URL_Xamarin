@@ -1,6 +1,7 @@
 # AutosApp2: Aplicación Interactiva de Información de Autos
 
-![Portada de AutosApp2](ruta/a/tu/imagen/de/portada.jpg)
+![Portada de AutosApp2](CLASE_AUTO.png)
+)
 
 ## Descripción
 
