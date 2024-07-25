@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AutosApp2.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Estilos Globales -->
+            <Style x:Key="PickerStyle" TargetType="Picker">
+                <Setter Property="BackgroundColor" Value="#f0f0f0"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="TextColor" Value="#333"/>
+            </Style>
+
+            <Style x:Key="ImageStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFit"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+
+            <Style x:Key="FrameStyle" TargetType="Frame">
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="HasShadow" Value="True"/>
+                <Setter Property="BackgroundColor" Value="#e0e0e0"/>
+            </Style>
+
+            <!-- Fondo Gradiente -->
+            <LinearGradientBrush x:Key="BackgroundGradient">
+                <GradientStop Color="#FFFFFF" Offset="0.0" />
+                <GradientStop Color="#D0D0D0" Offset="1.0" />
+            </LinearGradientBrush>
+
+            <!-- Estilos de Botones -->
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="BackgroundColor" Value="#007BFF"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="CornerRadius" Value="5"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#FFFFFF" Offset="0.0" />
+            <GradientStop Color="#D0D0D0" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <StackLayout Padding="10">
+        <Frame Style="{StaticResource FrameStyle}">
+            <Label Text="Uso de Clases, Propiedades, Constructor y Json URL"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   TextColor="#333333"/>
+        </Frame>
+
+        <Frame Style="{StaticResource FrameStyle}">
+            <StackLayout>
+                <Picker x:Name="autoPicker" SelectedIndexChanged="OnPickerSelectedIndexChanged" Style="{StaticResource PickerStyle}">
+                    <Picker.Items>
+                        <x:String>Toyota Corolla</x:String>
+                        <x:String>Honda Civic</x:String>
+                        <x:String>Ford Mustang</x:String>
+                        <x:String>BMW X5</x:String>
+                        <x:String>Audi A4</x:String>
+                        <x:String>Mercedes-Benz C-Class</x:String>
+                        <x:String>Tesla Model S</x:String>
+                        <x:String>Volkswagen Golf</x:String>
+                        <x:String>Subaru Outback</x:String>
+                        <x:String>Nissan Altima</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name="marcaLabel" Text="Marca: " Style="{StaticResource LabelStyle}" />
+                <Label x:Name="modeloLabel" Text="Modelo: " Style="{StaticResource LabelStyle}" />
+                <Label x:Name="añoLabel" Text="Año: " Style="{StaticResource LabelStyle}" />
+                <Image x:Name="autoImage" Style="{StaticResource ImageStyle}" WidthRequest="300" HeightRequest="200" />
+            </StackLayout>
+        </Frame>
+
+        <!-- Botones en la misma línea -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Limpiar" Style="{StaticResource ButtonStyle}" Clicked="OnClearButtonClicked"/>
+            <Button Text="Finalizar" Style="{StaticResource ButtonStyle}" Clicked="OnFinishButtonClicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
